@@ -12,6 +12,10 @@
 		AD7CFA161A7F917400BB0C19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7CFA151A7F917400BB0C19 /* Images.xcassets */; };
 		AD7CFA191A7F917400BB0C19 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7CFA171A7F917400BB0C19 /* LaunchScreen.xib */; };
 		AD7CFA251A7F917400BB0C19 /* EverpobreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA241A7F917400BB0C19 /* EverpobreTests.m */; };
+		AD7CFA311A7F958400BB0C19 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA2F1A7F958400BB0C19 /* Model.xcdatamodeld */; };
+		AD7CFA341A7FA13400BB0C19 /* VOSPhotoContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA331A7FA13400BB0C19 /* VOSPhotoContainer.m */; };
+		AD7CFA371A7FA13500BB0C19 /* VOSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA361A7FA13500BB0C19 /* VOSNote.m */; };
+		AD7CFA3A1A7FA13500BB0C19 /* VOSNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA391A7FA13500BB0C19 /* VOSNotebook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,13 @@
 		AD7CFA1E1A7F917400BB0C19 /* EverpobreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EverpobreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7CFA231A7F917400BB0C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7CFA241A7F917400BB0C19 /* EverpobreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EverpobreTests.m; sourceTree = "<group>"; };
+		AD7CFA301A7F958400BB0C19 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		AD7CFA321A7FA13400BB0C19 /* VOSPhotoContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSPhotoContainer.h; sourceTree = "<group>"; };
+		AD7CFA331A7FA13400BB0C19 /* VOSPhotoContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSPhotoContainer.m; sourceTree = "<group>"; };
+		AD7CFA351A7FA13500BB0C19 /* VOSNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSNote.h; sourceTree = "<group>"; };
+		AD7CFA361A7FA13500BB0C19 /* VOSNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSNote.m; sourceTree = "<group>"; };
+		AD7CFA381A7FA13500BB0C19 /* VOSNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSNotebook.h; sourceTree = "<group>"; };
+		AD7CFA391A7FA13500BB0C19 /* VOSNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSNotebook.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +87,7 @@
 		AD7CFA0D1A7F917400BB0C19 /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				AD7CFA2E1A7F950300BB0C19 /* Models */,
 				AD7CFA121A7F917400BB0C19 /* AppDelegate.h */,
 				AD7CFA131A7F917400BB0C19 /* AppDelegate.m */,
 				AD7CFA151A7F917400BB0C19 /* Images.xcassets */,
@@ -109,6 +121,20 @@
 				AD7CFA231A7F917400BB0C19 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD7CFA2E1A7F950300BB0C19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD7CFA2F1A7F958400BB0C19 /* Model.xcdatamodeld */,
+				AD7CFA381A7FA13500BB0C19 /* VOSNotebook.h */,
+				AD7CFA391A7FA13500BB0C19 /* VOSNotebook.m */,
+				AD7CFA351A7FA13500BB0C19 /* VOSNote.h */,
+				AD7CFA361A7FA13500BB0C19 /* VOSNote.m */,
+				AD7CFA321A7FA13400BB0C19 /* VOSPhotoContainer.h */,
+				AD7CFA331A7FA13400BB0C19 /* VOSPhotoContainer.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7CFA141A7F917400BB0C19 /* AppDelegate.m in Sources */,
+				AD7CFA3A1A7FA13500BB0C19 /* VOSNotebook.m in Sources */,
 				AD7CFA111A7F917400BB0C19 /* main.m in Sources */,
+				AD7CFA311A7F958400BB0C19 /* Model.xcdatamodeld in Sources */,
+				AD7CFA371A7FA13500BB0C19 /* VOSNote.m in Sources */,
+				AD7CFA341A7FA13400BB0C19 /* VOSPhotoContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +434,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AD7CFA2F1A7F958400BB0C19 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AD7CFA301A7F958400BB0C19 /* Model.xcdatamodel */,
+			);
+			currentVersion = AD7CFA301A7F958400BB0C19 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AD7CFA031A7F917400BB0C19 /* Project object */;
 }
