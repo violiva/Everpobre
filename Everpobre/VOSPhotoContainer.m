@@ -15,6 +15,6 @@
 }
 
 -(void) setImage:(UIImage *)image{
-    self.photoData = UIImageJPEGRepresentation(image, 0.9);   // --- 0.9 calidad muy buena contra más cercano a 1
+    self.photoData = UIImageJPEGRepresentation(image, 0.9);
 }
 @end

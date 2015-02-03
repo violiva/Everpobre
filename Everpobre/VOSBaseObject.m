@@ -48,11 +48,13 @@
 -(void) setupKVO{
     // Alta en notificaciones para las propiedades que quiero observar
     
+    // opciones para que te pase el valor antiguo y el nuevo( no nos hace falta: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld ) esto es para no recibir los datos de la imagen 2 veces -> Problemas de memoria
     for (NSString * key in [[self class] observableKeys]){
     
         [self addObserver:self
                forKeyPath:key
-                  options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+//                  options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                  options:0
                   context:NULL];
     }
     
