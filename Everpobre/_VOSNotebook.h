@@ -2,6 +2,7 @@
 // Make changes to VOSNotebook.h instead.
 
 @import CoreData;
+#import "VOSBaseObject.h"
 
 extern const struct VOSNotebookAttributes {
 	__unsafe_unretained NSString *creationDate;
@@ -18,7 +19,7 @@ extern const struct VOSNotebookRelationships {
 @interface VOSNotebookID : NSManagedObjectID {}
 @end
 
-@interface _VOSNotebook : NSManagedObject {}
+@interface _VOSNotebook : VOSBaseObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;

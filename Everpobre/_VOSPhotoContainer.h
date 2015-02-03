@@ -2,6 +2,7 @@
 // Make changes to VOSPhotoContainer.h instead.
 
 @import CoreData;
+#import "VOSBaseObject.h"
 
 extern const struct VOSPhotoContainerAttributes {
 	__unsafe_unretained NSString *photoData;
@@ -16,7 +17,7 @@ extern const struct VOSPhotoContainerRelationships {
 @interface VOSPhotoContainerID : NSManagedObjectID {}
 @end
 
-@interface _VOSPhotoContainer : NSManagedObject {}
+@interface _VOSPhotoContainer : VOSBaseObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
