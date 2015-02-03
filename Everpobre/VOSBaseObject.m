@@ -10,15 +10,15 @@
 
 @interface VOSBaseObject()
 
-+(NSArray *) observableKeys;
-
 @end
 
 @implementation VOSBaseObject
 
 #pragma mark - Class methods
 +(NSArray *) observableKeys{
-    return @[@"name", @"text", @"notebook"];
+//    return @[ @"name", @"text", @"notebook" ];
+//    nuestros objetos a observar se definirán en cada clase
+    return nil;
     
 }
 
@@ -49,7 +49,7 @@
     // Alta en notificaciones para las propiedades que quiero observar
     
     for (NSString * key in [[self class] observableKeys]){
-        
+    
         [self addObserver:self
                forKeyPath:key
                   options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld

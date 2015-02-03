@@ -19,11 +19,13 @@
     return nb;
 }
 
+#pragma mark - Util
 +(NSArray *) observableKeys{
-    return @[@"name", @"notes"];
+    return @[ @"name", @"notes" ];
     
 }
 
+#pragma mark - KVO
 -(void) observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
                         change:(NSDictionary *)change

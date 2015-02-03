@@ -27,11 +27,14 @@
     return note;
 }
 
+
+#pragma mark - Util
 +(NSArray *) observableKeys{
-    return @[@"name", @"text", @"notebook"];
+    return @[ @"name", @"text", @"notebook", @"photo", @"photo.photoData" ];
     
 }
 
+#pragma mark - KVO
 -(void) observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
                         change:(NSDictionary *)change
