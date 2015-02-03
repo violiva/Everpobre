@@ -19,6 +19,7 @@
 		AD7CFA4A1A7FAB4F00BB0C19 /* VOSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA421A7FAB4F00BB0C19 /* VOSNote.m */; };
 		AD7CFA4B1A7FAB4F00BB0C19 /* VOSNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA441A7FAB4F00BB0C19 /* VOSNotebook.m */; };
 		AD7CFA4C1A7FAB4F00BB0C19 /* VOSPhotoContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA461A7FAB4F00BB0C19 /* VOSPhotoContainer.m */; };
+		ADAA15C01A80D76700B3575B /* VOSCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAA15BF1A80D76700B3575B /* VOSCoreDataStack.m */; };
 		ADD12D1D1A7FECF900194603 /* VOSBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD12D1C1A7FECF900194603 /* VOSBaseObject.m */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		AD7CFA441A7FAB4F00BB0C19 /* VOSNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSNotebook.m; sourceTree = "<group>"; };
 		AD7CFA451A7FAB4F00BB0C19 /* VOSPhotoContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSPhotoContainer.h; sourceTree = "<group>"; };
 		AD7CFA461A7FAB4F00BB0C19 /* VOSPhotoContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSPhotoContainer.m; sourceTree = "<group>"; };
+		ADAA15BE1A80D76700B3575B /* VOSCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSCoreDataStack.h; sourceTree = "<group>"; };
+		ADAA15BF1A80D76700B3575B /* VOSCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSCoreDataStack.m; sourceTree = "<group>"; };
 		ADD12D1B1A7FECF900194603 /* VOSBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSBaseObject.h; sourceTree = "<group>"; };
 		ADD12D1C1A7FECF900194603 /* VOSBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSBaseObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +141,8 @@
 		AD7CFA2E1A7F950300BB0C19 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ADAA15BE1A80D76700B3575B /* VOSCoreDataStack.h */,
+				ADAA15BF1A80D76700B3575B /* VOSCoreDataStack.m */,
 				ADD12D1B1A7FECF900194603 /* VOSBaseObject.h */,
 				ADD12D1C1A7FECF900194603 /* VOSBaseObject.m */,
 				AD7CFA2F1A7F958400BB0C19 /* Model.xcdatamodeld */,
@@ -269,6 +274,7 @@
 				AD7CFA491A7FAB4F00BB0C19 /* _VOSPhotoContainer.m in Sources */,
 				AD7CFA111A7F917400BB0C19 /* main.m in Sources */,
 				AD7CFA481A7FAB4F00BB0C19 /* _VOSNotebook.m in Sources */,
+				ADAA15C01A80D76700B3575B /* VOSCoreDataStack.m in Sources */,
 				AD7CFA471A7FAB4F00BB0C19 /* _VOSNote.m in Sources */,
 				AD7CFA311A7F958400BB0C19 /* Model.xcdatamodeld in Sources */,
 				AD7CFA4A1A7FAB4F00BB0C19 /* VOSNote.m in Sources */,
