@@ -20,6 +20,13 @@
     // Do any additional setup after loading the view from its nib.
     
     self.title = @"Everpobre";
+    
+    // Añadimos botón para añadir nueva libreta.
+    UIBarButtonItem * addBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                             target:self
+                                                                             action:@selector( addNoteBook: )];
+    
+    self.navigationItem.rightBarButtonItem = addBtn;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,5 +62,32 @@
     return cell;
     
 }
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    // Averiguar si el usuario quiere definitivamente eliminar el registro
+    if ( editingStyle == UITableViewCellEditingStyleDelete ){
+        
+        // borramos la libreta, pero ¿ cuál es ?
+        NSManagedObjectContext * ctx = self.fetchedResultsController.managedObjectContext;
+        VOSNotebook * difunto = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        
+        [ctx deleteObject:difunto];
+    }
+}
+
+// Personalización del título del botón que aparece con el gesto de deslizar a la izquierda. Por defecto viene como Delete.
+-(NSString *) tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"Remove";
+}
+
+#pragma mark - Actions
+-(void) addNoteBook:(id) sender{
+    [VOSNotebook notebookWithName:@"Nueva libreta"
+                          context:self.fetchedResultsController.managedObjectContext];
+    
+}
+
+
 
 @end

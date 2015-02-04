@@ -12,6 +12,7 @@
 #import "VOSNotebook.h"
 #import "VOSPhotoContainer.h"
 #import "VOSNotebooksViewController.h"
+#import "UIViewController+Navigation.h"
 
 
 @interface AppDelegate ()
@@ -40,7 +41,7 @@
                                                           selector:@selector(caseInsensitiveCompare:)],
                            [NSSortDescriptor sortDescriptorWithKey:VOSNoteAttributes.modificationDate
                                                          ascending:YES
-                                                          selector:@selector(caseInsensitiveCompare:)]];
+                                                          ]];
     
     NSFetchedResultsController * fc = [[NSFetchedResultsController alloc] initWithFetchRequest:r
                                                                           managedObjectContext:self.stack.context
@@ -52,10 +53,11 @@
                                                                                                        style:UITableViewStylePlain];
     
     // Lo metemos en el NavigationController
-    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:nbVC];
+//    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:nbVC];
+//    No creamos ya el navigation porque ya está extendido como una categoría del ViewController
     
     // Lo mostramos
-    self.window.rootViewController = nav;
+    self.window.rootViewController = [nbVC vosWrappedInNavigation];
     
     
     //
