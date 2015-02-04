@@ -1,20 +1,20 @@
 //
-//  AGTCoreDataTableViewController.m
+//  VOSCoreDataTableViewController.m
 //  Everpobre
 //
-//  Created by Fernando Rodríguez Romero on 1/24/13.
-//  Copyright (c) 2013 Fernando. All rights reserved.
+//  Created by Vicente Oliva de la Serna 04/02/2015.
+//  Copyright (c) 2015 Vicente Oliva de la Serna. All rights reserved.
 //
 
-#import "AGTCoreDataTableViewController.h"
+#import "VOSCoreDataTableViewController.h"
 
 
 
-@interface AGTCoreDataTableViewController()
+@interface VOSCoreDataTableViewController()
 @property (nonatomic) BOOL beganUpdates;
 @end
 
-@implementation AGTCoreDataTableViewController
+@implementation VOSCoreDataTableViewController
 
 
 -(id) initWithFetchedResultsController: (NSFetchedResultsController *) aFetchedResultsController

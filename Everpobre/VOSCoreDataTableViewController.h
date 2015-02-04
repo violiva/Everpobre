@@ -1,9 +1,9 @@
 //
-//  AGTCoreDataTableViewController.h
+//  VOSCoreDataTableViewController.h
 //  
 //
-//  Created by Fernando Rodríguez Romero on 1/24/13.
-//  Copyright (c) 2013 Fernando. All rights reserved.
+//  Created by Vicente Oliva de la Serna 04/02/2015.
+//  Copyright (c) 2015 Vicente Oliva de la Serna. All rights reserved.
 //
 // This class mostly just copies the code from NSFetchedResultsController's documentation page
 //   into a subclass of UITableViewController.
@@ -21,10 +21,7 @@
 @import CoreData;
 @import UIKit;
 
-@interface AGTCoreDataTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
-
-
-
+@interface VOSCoreDataTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 
 // The controller (this class fetches nothing if this is not set).

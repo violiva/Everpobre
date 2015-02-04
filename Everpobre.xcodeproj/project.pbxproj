@@ -20,6 +20,8 @@
 		AD7CFA4B1A7FAB4F00BB0C19 /* VOSNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA441A7FAB4F00BB0C19 /* VOSNotebook.m */; };
 		AD7CFA4C1A7FAB4F00BB0C19 /* VOSPhotoContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA461A7FAB4F00BB0C19 /* VOSPhotoContainer.m */; };
 		ADAA15C01A80D76700B3575B /* VOSCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAA15BF1A80D76700B3575B /* VOSCoreDataStack.m */; };
+		ADC102EB1A821F9F0040BA95 /* VOSCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC102EA1A821F9F0040BA95 /* VOSCoreDataTableViewController.m */; };
+		ADC102EF1A8220800040BA95 /* VOSNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC102ED1A8220800040BA95 /* VOSNotebooksViewController.m */; };
 		ADD12D1D1A7FECF900194603 /* VOSBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD12D1C1A7FECF900194603 /* VOSBaseObject.m */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,10 @@
 		AD7CFA461A7FAB4F00BB0C19 /* VOSPhotoContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSPhotoContainer.m; sourceTree = "<group>"; };
 		ADAA15BE1A80D76700B3575B /* VOSCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSCoreDataStack.h; sourceTree = "<group>"; };
 		ADAA15BF1A80D76700B3575B /* VOSCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSCoreDataStack.m; sourceTree = "<group>"; };
+		ADC102E91A821F9F0040BA95 /* VOSCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSCoreDataTableViewController.h; sourceTree = "<group>"; };
+		ADC102EA1A821F9F0040BA95 /* VOSCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSCoreDataTableViewController.m; sourceTree = "<group>"; };
+		ADC102EC1A8220800040BA95 /* VOSNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSNotebooksViewController.h; sourceTree = "<group>"; };
+		ADC102ED1A8220800040BA95 /* VOSNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSNotebooksViewController.m; sourceTree = "<group>"; };
 		ADD12D1B1A7FECF900194603 /* VOSBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSBaseObject.h; sourceTree = "<group>"; };
 		ADD12D1C1A7FECF900194603 /* VOSBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSBaseObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +147,7 @@
 		AD7CFA2E1A7F950300BB0C19 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ADC102E81A821F8E0040BA95 /* Controllers */,
 				ADAA15BE1A80D76700B3575B /* VOSCoreDataStack.h */,
 				ADAA15BF1A80D76700B3575B /* VOSCoreDataStack.m */,
 				ADD12D1B1A7FECF900194603 /* VOSBaseObject.h */,
@@ -168,6 +175,17 @@
 				AD7CFA401A7FAB4F00BB0C19 /* _VOSPhotoContainer.m */,
 			);
 			name = Machine;
+			sourceTree = "<group>";
+		};
+		ADC102E81A821F8E0040BA95 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADC102E91A821F9F0040BA95 /* VOSCoreDataTableViewController.h */,
+				ADC102EA1A821F9F0040BA95 /* VOSCoreDataTableViewController.m */,
+				ADC102EC1A8220800040BA95 /* VOSNotebooksViewController.h */,
+				ADC102ED1A8220800040BA95 /* VOSNotebooksViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +293,9 @@
 				AD7CFA111A7F917400BB0C19 /* main.m in Sources */,
 				AD7CFA481A7FAB4F00BB0C19 /* _VOSNotebook.m in Sources */,
 				ADAA15C01A80D76700B3575B /* VOSCoreDataStack.m in Sources */,
+				ADC102EB1A821F9F0040BA95 /* VOSCoreDataTableViewController.m in Sources */,
 				AD7CFA471A7FAB4F00BB0C19 /* _VOSNote.m in Sources */,
+				ADC102EF1A8220800040BA95 /* VOSNotebooksViewController.m in Sources */,
 				AD7CFA311A7F958400BB0C19 /* Model.xcdatamodeld in Sources */,
 				AD7CFA4A1A7FAB4F00BB0C19 /* VOSNote.m in Sources */,
 				ADD12D1D1A7FECF900194603 /* VOSBaseObject.m in Sources */,

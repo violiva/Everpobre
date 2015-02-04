@@ -11,6 +11,7 @@
 #import "VOSNote.h"
 #import "VOSNotebook.h"
 #import "VOSPhotoContainer.h"
+#import "VOSNotebooksViewController.h"
 
 
 @interface AppDelegate ()
@@ -30,9 +31,35 @@
     
     // Llamada a la creación de datos chorras
     [self createDummyData];
+
+    // Creamos el conjunto de datos
+    NSFetchRequest * r = [NSFetchRequest fetchRequestWithEntityName:[VOSNotebook entityName]];
+    r.fetchBatchSize = 30;
+    r.sortDescriptors = @[ [NSSortDescriptor sortDescriptorWithKey:VOSNoteAttributes.name
+                                                         ascending:YES
+                                                          selector:@selector(caseInsensitiveCompare:)],
+                           [NSSortDescriptor sortDescriptorWithKey:VOSNoteAttributes.modificationDate
+                                                         ascending:YES
+                                                          selector:@selector(caseInsensitiveCompare:)]];
+    
+    NSFetchedResultsController * fc = [[NSFetchedResultsController alloc] initWithFetchRequest:r
+                                                                          managedObjectContext:self.stack.context
+                                                                            sectionNameKeyPath:nil
+                                                                                     cacheName:nil ];
+    
+    // Creamos el controlador
+    VOSNotebooksViewController * nbVC = [[VOSNotebooksViewController alloc] initWithFetchedResultsController:fc
+                                                                                                       style:UITableViewStylePlain];
+    
+    // Lo metemos en el NavigationController
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:nbVC];
+    
+    // Lo mostramos
+    self.window.rootViewController = nav;
+    
     
     //
-    [self trastearConDatos];
+    // [self trastearConDatos];
     
     
     
