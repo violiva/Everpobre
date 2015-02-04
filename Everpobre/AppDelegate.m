@@ -12,6 +12,7 @@
 #import "VOSNotebook.h"
 #import "VOSPhotoContainer.h"
 
+
 @interface AppDelegate ()
 
 @property(nonatomic,strong) VOSCoreDataStack * stack;
@@ -103,6 +104,68 @@
     iCachete.text = @"App educativa para reforzar la coordinación motora fina y los reflejos";
     
     NSLog(@"Después: %@", iCachete.modificationDate);
+    
+    // Búsqueda
+    NSFetchRequest * r = [NSFetchRequest fetchRequestWithEntityName:[VOSNote entityName]];
+
+    // limitamos la lectura de disco de 20 en 20 objetos. Esto sería mejor después de terminar la aplicación una vez pasada la herramienta de instruments
+    r.fetchBatchSize = 20;
+
+    /*
+    // Esta ordenación SÍ tiene en cuenta minúsculas y mayúsculas
+    r.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:VOSNoteAttributes.name
+                                                        ascending:YES],
+                          [NSSortDescriptor sortDescriptorWithKey:VOSNoteAttributes.modificationDate
+                                                        ascending:NO]];
+     
+    // La siguiente ordenación ya SI tiene en cuenta la ordenación sin diferenciar las mayúsculas y minúsculas
+    r.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:VOSNoteAttributes.name
+                                                        ascending:YES selector:@selector(caseInsensitiveCompare:)],
+                          [NSSortDescriptor sortDescriptorWithKey:VOSNoteAttributes.modificationDate
+                                                        ascending:NO]];
+     */
+    
+    // NSPredicated (predicado). Es una clase que representa una función que devuelve un booleano y sirve para filtrar, todo lo que devuelva YES se queda en el filtro
+    
+    r.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:VOSNoteAttributes.name
+                                                        ascending:YES selector:@selector(caseInsensitiveCompare:)],
+                          [NSSortDescriptor sortDescriptorWithKey:VOSNoteAttributes.modificationDate
+                                                        ascending:NO]];
+    
+    r.predicate = [NSPredicate predicateWithFormat:@"notebook == %@", apps];
+    
+    
+    NSError * err = nil;
+    NSArray * res = [self.stack.context executeFetchRequest:r error:&err];
+    
+    if ( res == nil ){
+        // Error
+        NSLog(@"Error al buscar: %@", err);
+    }
+    NSLog(@"Número de Notas: %lu", (unsigned long)[res count]);
+    NSLog(@"Las libretas: %@", res);
+
+    // De verdad es un array ?
+    NSLog(@"Clase: %@", [res class]);
+    
+    // borrar
+    [self.stack.context deleteObject:apps];    // Borro la libreta del cachete
+
+    r.predicate = nil;
+    res = [self.stack.context executeFetchRequest:r error:&err];
+    if ( res == nil ){
+        // Error
+        NSLog(@"Error al buscar de nuevo: %@", res);
+    }
+    NSLog(@"Notas existentes: %@", res );
+    
+    // Guardamos
+    [self.stack saveWithErrorBlock:^(NSError * error){
+        NSLog(@"Error al guardar, %@", error);
+    }];
+    
+    // VOSCoreDataStack
+    
     
     
 }
