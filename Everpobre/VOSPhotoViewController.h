@@ -15,6 +15,8 @@
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)deletePhoto:(id)sender;
 - (IBAction)Vintage:(id)sender;
+- (IBAction)faceRecognition:(id)sender;
+
 
 -(id)initWithModel:(VOSNote *) model;
 

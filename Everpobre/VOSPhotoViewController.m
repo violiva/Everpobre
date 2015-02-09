@@ -150,7 +150,7 @@
     // Creamos el filtro de viñeta
     CIFilter * vignette = [CIFilter filterWithName:@"CIVignette"];
     [vignette setDefaults];
-    [vignette setValue:@12
+    [vignette setValue:@4
                 forKey:@"InputIntensity"];
     
     // los encadenamos
@@ -173,7 +173,44 @@
     
 }
 
+- (IBAction)faceRecognition:(id)sender {
 
+    // Analizamos la imagen para ver cuantas caras detecta en ellas
+    // Nos devolverá un array con las caras localizadas
+    NSArray * features = [self featuresInImage:self.photoView.image];
+    
+    if (features){
+        CIFeature * face = [features lastObject];
+        CGRect faceBounds = [face bounds];
+        
+        CIImage * img = [CIImage imageWithCGImage:self.photoView.image.CGImage];
+        CIImage * crop = [img imageByCroppingToRect:faceBounds];
+        
+        UIImage * newImage =[UIImage imageWithCIImage:crop];
+
+        // Encasquetamos en UIImageView la última cara reconocida
+        self.photoView.image = newImage;
+        self.model.photo.image = newImage;
+    }
+}
+
+
+
+-(NSArray *) featuresInImage:(UIImage *) imageOrigin{
+    CIContext * context = [CIContext contextWithOptions:nil];
+    CIDetector * faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace
+                                                   context:context
+                                                   options:@{CIDetectorAccuracy :
+                                                                 CIDetectorAccuracyHigh}];
+    CIImage * image = [CIImage imageWithCGImage:[imageOrigin CGImage]];
+    NSArray * features = [faceDetector featuresInImage:image];
+    if ( [features count]){
+        return features;
+    }else{
+        return nil;
+    }
+    
+}
 
 
 #pragma mark - UIImagePickerControllerDelegate
