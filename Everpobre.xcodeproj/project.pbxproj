@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0EDA901A896327004672E2 /* VOSFacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0EDA8F1A896327004672E2 /* VOSFacesTableViewController.m */; };
 		AD7CFA111A7F917400BB0C19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA101A7F917400BB0C19 /* main.m */; };
 		AD7CFA141A7F917400BB0C19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA131A7F917400BB0C19 /* AppDelegate.m */; };
 		AD7CFA161A7F917400BB0C19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7CFA151A7F917400BB0C19 /* Images.xcassets */; };
@@ -54,6 +55,8 @@
 /* Begin PBXFileReference section */
 		AD0EDA8A1A893D17004672E2 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		AD0EDA8D1A89419A004672E2 /* Everpobre-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Everpobre-Prefix.pch"; sourceTree = "<group>"; };
+		AD0EDA8E1A896327004672E2 /* VOSFacesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSFacesTableViewController.h; sourceTree = "<group>"; };
+		AD0EDA8F1A896327004672E2 /* VOSFacesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSFacesTableViewController.m; sourceTree = "<group>"; };
 		AD7CFA0B1A7F917400BB0C19 /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7CFA0F1A7F917400BB0C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7CFA101A7F917400BB0C19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				ADF072481A83A71D00133C68 /* VOSPhotoViewController.h */,
 				ADF072491A83A71D00133C68 /* VOSPhotoViewController.m */,
 				ADF0724A1A83A71D00133C68 /* VOSPhotoViewController.xib */,
+				AD0EDA8E1A896327004672E2 /* VOSFacesTableViewController.h */,
+				AD0EDA8F1A896327004672E2 /* VOSFacesTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -396,6 +401,7 @@
 				AD7CFA111A7F917400BB0C19 /* main.m in Sources */,
 				AD7CFA481A7FAB4F00BB0C19 /* _VOSNotebook.m in Sources */,
 				ADD3CBBF1A837837009FF6CF /* VOSPhotoTableViewCell.m in Sources */,
+				AD0EDA901A896327004672E2 /* VOSFacesTableViewController.m in Sources */,
 				ADF0724B1A83A71D00133C68 /* VOSPhotoViewController.m in Sources */,
 				ADAA15C01A80D76700B3575B /* VOSCoreDataStack.m in Sources */,
 				ADC102FA1A8243690040BA95 /* VOSNotesViewController.m in Sources */,

@@ -11,6 +11,7 @@
 #import "VOSPhotoViewController.h"
 #import "VOSNote.h"
 #import "VOSPhotoContainer.h"
+#import "VOSFacesTableViewController.h"
 
 
 @interface VOSPhotoViewController ()
@@ -180,17 +181,13 @@
     NSArray * features = [self featuresInImage:self.photoView.image];
     
     if (features){
-        CIFeature * face = [features lastObject];
-        CGRect faceBounds = [face bounds];
         
-        CIImage * img = [CIImage imageWithCGImage:self.photoView.image.CGImage];
-        CIImage * crop = [img imageByCroppingToRect:faceBounds];
+        // Si reconoce alguna cara en la foto, montamos un nuevo TableViewController con las caras reconocidas en la foto
+        VOSFacesTableViewController * facesVC = [[VOSFacesTableViewController alloc] initWithModel:features style:UITableViewStylePlain img:self.photoView.image];
         
-        UIImage * newImage =[UIImage imageWithCIImage:crop];
+        [self.navigationController pushViewController: facesVC
+                                             animated:YES];
 
-        // Encasquetamos en UIImageView la última cara reconocida
-        self.photoView.image = newImage;
-        self.model.photo.image = newImage;
     }
 }
 
