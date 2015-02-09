@@ -1,8 +1,8 @@
 //
-//  AGTCoreDataStack.m
+//  VOSCoreDataStack.m
 //
-//  Created by Fernando Rodríguez Romero on 1/24/13.
-//  Copyright (c) 2013 Agbo. All rights reserved.
+//  Created by Vicente Oliva de la Serna on 2/2/15.
+//  Copyright (c) 2015 Vicente Oliva de la Serna. All rights reserved.
 //
 
 #import <CoreData/CoreData.h>

@@ -23,7 +23,22 @@
 		ADC102EB1A821F9F0040BA95 /* VOSCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC102EA1A821F9F0040BA95 /* VOSCoreDataTableViewController.m */; };
 		ADC102EF1A8220800040BA95 /* VOSNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC102ED1A8220800040BA95 /* VOSNotebooksViewController.m */; };
 		ADC102F71A823FA50040BA95 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC102F61A823FA50040BA95 /* UIViewController+Navigation.m */; };
+		ADC102FA1A8243690040BA95 /* VOSNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC102F91A8243690040BA95 /* VOSNotesViewController.m */; };
 		ADD12D1D1A7FECF900194603 /* VOSBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD12D1C1A7FECF900194603 /* VOSBaseObject.m */; };
+		ADD3CBBA1A836E42009FF6CF /* VOSNotebookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3CBB81A836E42009FF6CF /* VOSNotebookTableViewCell.m */; };
+		ADD3CBBB1A836E42009FF6CF /* VOSNotebookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3CBB91A836E42009FF6CF /* VOSNotebookTableViewCell.xib */; };
+		ADD3CBBF1A837837009FF6CF /* VOSPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3CBBD1A837837009FF6CF /* VOSPhotoTableViewCell.m */; };
+		ADD3CBC01A837837009FF6CF /* VOSPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3CBBE1A837837009FF6CF /* VOSPhotoTableViewCell.xib */; };
+		ADD3CBC41A83794B009FF6CF /* VOSTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3CBC21A83794B009FF6CF /* VOSTextTableViewCell.m */; };
+		ADD3CBC51A83794B009FF6CF /* VOSTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3CBC31A83794B009FF6CF /* VOSTextTableViewCell.xib */; };
+		ADD3CBC91A837B1A009FF6CF /* VOSDatesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3CBC71A837B1A009FF6CF /* VOSDatesTableViewCell.m */; };
+		ADD3CBCA1A837B1A009FF6CF /* VOSDatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3CBC81A837B1A009FF6CF /* VOSDatesTableViewCell.xib */; };
+		ADD3CBCE1A837C5E009FF6CF /* VOSNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3CBCC1A837C5E009FF6CF /* VOSNameTableViewCell.m */; };
+		ADD3CBCF1A837C5E009FF6CF /* VOSNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3CBCD1A837C5E009FF6CF /* VOSNameTableViewCell.xib */; };
+		ADF072441A83886000133C68 /* VOSNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF072431A83886000133C68 /* VOSNoteViewController.m */; };
+		ADF072461A83A55A00133C68 /* Photo_not_available.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADF072451A83A55A00133C68 /* Photo_not_available.jpg */; };
+		ADF0724B1A83A71D00133C68 /* VOSPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF072491A83A71D00133C68 /* VOSPhotoViewController.m */; };
+		ADF0724C1A83A71D00133C68 /* VOSPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF0724A1A83A71D00133C68 /* VOSPhotoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +83,31 @@
 		ADC102ED1A8220800040BA95 /* VOSNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSNotebooksViewController.m; sourceTree = "<group>"; };
 		ADC102F51A823FA50040BA95 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
 		ADC102F61A823FA50040BA95 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
+		ADC102F81A8243690040BA95 /* VOSNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSNotesViewController.h; sourceTree = "<group>"; };
+		ADC102F91A8243690040BA95 /* VOSNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSNotesViewController.m; sourceTree = "<group>"; };
 		ADD12D1B1A7FECF900194603 /* VOSBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSBaseObject.h; sourceTree = "<group>"; };
 		ADD12D1C1A7FECF900194603 /* VOSBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSBaseObject.m; sourceTree = "<group>"; };
+		ADD3CBB71A836E42009FF6CF /* VOSNotebookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSNotebookTableViewCell.h; sourceTree = "<group>"; };
+		ADD3CBB81A836E42009FF6CF /* VOSNotebookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSNotebookTableViewCell.m; sourceTree = "<group>"; };
+		ADD3CBB91A836E42009FF6CF /* VOSNotebookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VOSNotebookTableViewCell.xib; sourceTree = "<group>"; };
+		ADD3CBBC1A837837009FF6CF /* VOSPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSPhotoTableViewCell.h; sourceTree = "<group>"; };
+		ADD3CBBD1A837837009FF6CF /* VOSPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSPhotoTableViewCell.m; sourceTree = "<group>"; };
+		ADD3CBBE1A837837009FF6CF /* VOSPhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VOSPhotoTableViewCell.xib; sourceTree = "<group>"; };
+		ADD3CBC11A83794B009FF6CF /* VOSTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSTextTableViewCell.h; sourceTree = "<group>"; };
+		ADD3CBC21A83794B009FF6CF /* VOSTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSTextTableViewCell.m; sourceTree = "<group>"; };
+		ADD3CBC31A83794B009FF6CF /* VOSTextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VOSTextTableViewCell.xib; sourceTree = "<group>"; };
+		ADD3CBC61A837B1A009FF6CF /* VOSDatesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSDatesTableViewCell.h; sourceTree = "<group>"; };
+		ADD3CBC71A837B1A009FF6CF /* VOSDatesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSDatesTableViewCell.m; sourceTree = "<group>"; };
+		ADD3CBC81A837B1A009FF6CF /* VOSDatesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VOSDatesTableViewCell.xib; sourceTree = "<group>"; };
+		ADD3CBCB1A837C5E009FF6CF /* VOSNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSNameTableViewCell.h; sourceTree = "<group>"; };
+		ADD3CBCC1A837C5E009FF6CF /* VOSNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSNameTableViewCell.m; sourceTree = "<group>"; };
+		ADD3CBCD1A837C5E009FF6CF /* VOSNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VOSNameTableViewCell.xib; sourceTree = "<group>"; };
+		ADF072421A83886000133C68 /* VOSNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSNoteViewController.h; sourceTree = "<group>"; };
+		ADF072431A83886000133C68 /* VOSNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSNoteViewController.m; sourceTree = "<group>"; };
+		ADF072451A83A55A00133C68 /* Photo_not_available.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Photo_not_available.jpg; sourceTree = "<group>"; };
+		ADF072481A83A71D00133C68 /* VOSPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSPhotoViewController.h; sourceTree = "<group>"; };
+		ADF072491A83A71D00133C68 /* VOSPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSPhotoViewController.m; sourceTree = "<group>"; };
+		ADF0724A1A83A71D00133C68 /* VOSPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VOSPhotoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +149,8 @@
 		AD7CFA0D1A7F917400BB0C19 /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				ADF072471A83A55E00133C68 /* Resources */,
+				ADD3CBB61A836E16009FF6CF /* Views */,
 				ADC102F11A823DCE0040BA95 /* Categories */,
 				ADC102E81A821F8E0040BA95 /* Controllers */,
 				AD7CFA2E1A7F950300BB0C19 /* Models */,
@@ -152,11 +192,11 @@
 		AD7CFA2E1A7F950300BB0C19 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AD7CFA2F1A7F958400BB0C19 /* Model.xcdatamodeld */,
 				ADAA15BE1A80D76700B3575B /* VOSCoreDataStack.h */,
 				ADAA15BF1A80D76700B3575B /* VOSCoreDataStack.m */,
 				ADD12D1B1A7FECF900194603 /* VOSBaseObject.h */,
 				ADD12D1C1A7FECF900194603 /* VOSBaseObject.m */,
-				AD7CFA2F1A7F958400BB0C19 /* Model.xcdatamodeld */,
 				AD7CFA411A7FAB4F00BB0C19 /* VOSNote.h */,
 				AD7CFA421A7FAB4F00BB0C19 /* VOSNote.m */,
 				AD7CFA431A7FAB4F00BB0C19 /* VOSNotebook.h */,
@@ -188,6 +228,13 @@
 				ADC102EA1A821F9F0040BA95 /* VOSCoreDataTableViewController.m */,
 				ADC102EC1A8220800040BA95 /* VOSNotebooksViewController.h */,
 				ADC102ED1A8220800040BA95 /* VOSNotebooksViewController.m */,
+				ADC102F81A8243690040BA95 /* VOSNotesViewController.h */,
+				ADC102F91A8243690040BA95 /* VOSNotesViewController.m */,
+				ADF072421A83886000133C68 /* VOSNoteViewController.h */,
+				ADF072431A83886000133C68 /* VOSNoteViewController.m */,
+				ADF072481A83A71D00133C68 /* VOSPhotoViewController.h */,
+				ADF072491A83A71D00133C68 /* VOSPhotoViewController.m */,
+				ADF0724A1A83A71D00133C68 /* VOSPhotoViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +246,36 @@
 				ADC102F61A823FA50040BA95 /* UIViewController+Navigation.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		ADD3CBB61A836E16009FF6CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADD3CBB71A836E42009FF6CF /* VOSNotebookTableViewCell.h */,
+				ADD3CBB81A836E42009FF6CF /* VOSNotebookTableViewCell.m */,
+				ADD3CBB91A836E42009FF6CF /* VOSNotebookTableViewCell.xib */,
+				ADD3CBBC1A837837009FF6CF /* VOSPhotoTableViewCell.h */,
+				ADD3CBBD1A837837009FF6CF /* VOSPhotoTableViewCell.m */,
+				ADD3CBBE1A837837009FF6CF /* VOSPhotoTableViewCell.xib */,
+				ADD3CBC11A83794B009FF6CF /* VOSTextTableViewCell.h */,
+				ADD3CBC21A83794B009FF6CF /* VOSTextTableViewCell.m */,
+				ADD3CBC31A83794B009FF6CF /* VOSTextTableViewCell.xib */,
+				ADD3CBC61A837B1A009FF6CF /* VOSDatesTableViewCell.h */,
+				ADD3CBC71A837B1A009FF6CF /* VOSDatesTableViewCell.m */,
+				ADD3CBC81A837B1A009FF6CF /* VOSDatesTableViewCell.xib */,
+				ADD3CBCB1A837C5E009FF6CF /* VOSNameTableViewCell.h */,
+				ADD3CBCC1A837C5E009FF6CF /* VOSNameTableViewCell.m */,
+				ADD3CBCD1A837C5E009FF6CF /* VOSNameTableViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		ADF072471A83A55E00133C68 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADF072451A83A55A00133C68 /* Photo_not_available.jpg */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,8 +358,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF072461A83A55A00133C68 /* Photo_not_available.jpg in Resources */,
+				ADD3CBCF1A837C5E009FF6CF /* VOSNameTableViewCell.xib in Resources */,
+				ADD3CBCA1A837B1A009FF6CF /* VOSDatesTableViewCell.xib in Resources */,
+				ADD3CBBB1A836E42009FF6CF /* VOSNotebookTableViewCell.xib in Resources */,
 				AD7CFA191A7F917400BB0C19 /* LaunchScreen.xib in Resources */,
+				ADD3CBC51A83794B009FF6CF /* VOSTextTableViewCell.xib in Resources */,
 				AD7CFA161A7F917400BB0C19 /* Images.xcassets in Resources */,
+				ADD3CBC01A837837009FF6CF /* VOSPhotoTableViewCell.xib in Resources */,
+				ADF0724C1A83A71D00133C68 /* VOSPhotoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,18 +385,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7CFA141A7F917400BB0C19 /* AppDelegate.m in Sources */,
+				ADD3CBCE1A837C5E009FF6CF /* VOSNameTableViewCell.m in Sources */,
+				ADD3CBBA1A836E42009FF6CF /* VOSNotebookTableViewCell.m in Sources */,
 				AD7CFA4B1A7FAB4F00BB0C19 /* VOSNotebook.m in Sources */,
 				AD7CFA491A7FAB4F00BB0C19 /* _VOSPhotoContainer.m in Sources */,
 				AD7CFA111A7F917400BB0C19 /* main.m in Sources */,
 				AD7CFA481A7FAB4F00BB0C19 /* _VOSNotebook.m in Sources */,
+				ADD3CBBF1A837837009FF6CF /* VOSPhotoTableViewCell.m in Sources */,
+				ADF0724B1A83A71D00133C68 /* VOSPhotoViewController.m in Sources */,
 				ADAA15C01A80D76700B3575B /* VOSCoreDataStack.m in Sources */,
+				ADC102FA1A8243690040BA95 /* VOSNotesViewController.m in Sources */,
 				ADC102F71A823FA50040BA95 /* UIViewController+Navigation.m in Sources */,
 				ADC102EB1A821F9F0040BA95 /* VOSCoreDataTableViewController.m in Sources */,
 				AD7CFA471A7FAB4F00BB0C19 /* _VOSNote.m in Sources */,
 				ADC102EF1A8220800040BA95 /* VOSNotebooksViewController.m in Sources */,
+				ADD3CBC41A83794B009FF6CF /* VOSTextTableViewCell.m in Sources */,
 				AD7CFA311A7F958400BB0C19 /* Model.xcdatamodeld in Sources */,
 				AD7CFA4A1A7FAB4F00BB0C19 /* VOSNote.m in Sources */,
+				ADF072441A83886000133C68 /* VOSNoteViewController.m in Sources */,
 				ADD12D1D1A7FECF900194603 /* VOSBaseObject.m in Sources */,
+				ADD3CBC91A837B1A009FF6CF /* VOSDatesTableViewCell.m in Sources */,
 				AD7CFA4C1A7FAB4F00BB0C19 /* VOSPhotoContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

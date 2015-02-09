@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="VOSDatesTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWz-RV-888">
+                        <rect key="frame" x="8" y="8" width="147" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="147" id="f2J-Ky-hq3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VRW-XO-VFM">
+                        <rect key="frame" x="163" y="10" width="149" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="nuZ-Sc-8sX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VRW-XO-VFM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="8Qq-Kq-XJP"/>
+                    <constraint firstItem="VRW-XO-VFM" firstAttribute="leading" secondItem="yWz-RV-888" secondAttribute="trailing" constant="8" id="PW0-Lj-R1Q"/>
+                    <constraint firstItem="VRW-XO-VFM" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="hJP-L4-5cj"/>
+                    <constraint firstItem="yWz-RV-888" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="hiZ-I1-oE9"/>
+                    <constraint firstItem="yWz-RV-888" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="lNS-RW-ckO"/>
+                    <constraint firstAttribute="centerY" secondItem="yWz-RV-888" secondAttribute="centerY" id="ujz-cQ-K4J"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="creationDate" destination="yWz-RV-888" id="VyA-fv-6ro"/>
+                <outlet property="modificationDate" destination="VRW-XO-VFM" id="ghe-rp-8NO"/>
+            </connections>
+            <point key="canvasLocation" x="249" y="441"/>
+        </tableViewCell>
+    </objects>
+</document>

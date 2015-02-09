@@ -13,7 +13,8 @@
 -(UINavigationController *) vosWrappedInNavigation{
     UINavigationController * nav = [UINavigationController new];
     
-    [nav pushViewController:self animated:NO];
+    [nav pushViewController:self
+                   animated:NO];
     
     return nav;
     

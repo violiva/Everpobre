@@ -10,7 +10,8 @@
 
 // Custom logic goes here.
 
-+(instancetype) notebookWithName:(NSString *) name context:(NSManagedObjectContext *) context{
++(instancetype) notebookWithName:(NSString *) name
+                         context:(NSManagedObjectContext *) context{
     VOSNotebook * nb = [self insertInManagedObjectContext:context];
     nb.name = name;
     nb.creationDate = [NSDate date];
@@ -20,10 +21,11 @@
 }
 
 #pragma mark - Util
-+(NSArray *) observableKeys{
-    return @[ @"name", @"notes" ];
-    
+-(NSArray *) observableKeys{
+    return @[VOSNotebookAttributes.name,
+             VOSNotebookRelationships.notes];
 }
+
 
 #pragma mark - KVO
 -(void) observeValueForKeyPath:(NSString *)keyPath

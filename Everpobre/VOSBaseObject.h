@@ -11,7 +11,7 @@
 
 @interface VOSBaseObject : NSManagedObject
 
-+(NSArray *) observableKeys;
+-(NSArray *) observableKeys;
 -(void) setupKVO;
 -(void) tearDownKVO;
 

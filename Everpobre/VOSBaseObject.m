@@ -14,14 +14,6 @@
 
 @implementation VOSBaseObject
 
-#pragma mark - Class methods
-+(NSArray *) observableKeys{
-//    return @[ @"name", @"text", @"notebook" ];
-//    nuestros objetos a observar se definirán en cada clase
-    return nil;
-    
-}
-
 #pragma mark - Lifecycle
 -(void) awakeFromInsert{
     [super awakeFromInsert];
@@ -44,12 +36,17 @@
     
 }
 
+#pragma mark - Util
+-(NSArray *) observableKeys{
+    return nil;
+}
+
 #pragma mark - KVO
 -(void) setupKVO{
     // Alta en notificaciones para las propiedades que quiero observar
     
     // opciones para que te pase el valor antiguo y el nuevo( no nos hace falta: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld ) esto es para no recibir los datos de la imagen 2 veces -> Problemas de memoria
-    for (NSString * key in [[self class] observableKeys]){
+    for (NSString * key in [self observableKeys]){
     
         [self addObserver:self
                forKeyPath:key
@@ -62,7 +59,7 @@
 
 -(void) tearDownKVO{
     // baja de todas las notificaciones
-    for (NSString * key in [[self class] observableKeys]){
+    for (NSString * key in [self observableKeys]){
         [self removeObserver:self
                   forKeyPath:key];
     }
