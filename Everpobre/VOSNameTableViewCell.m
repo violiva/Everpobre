@@ -18,11 +18,12 @@
 #pragma mark - Properties
 // creamos un setter personalizado
 -(void) setNote:(VOSNote *)note{
-    // sincronizamos la vista con la nota
-    self.nameField.text = note.name;
-    
     // guardamos la nota
     _note = note;
+
+    // sincronizamos la vista con la nota
+    self.nameField.text = note.name;
+
 }
 
 #pragma mark - Class methods

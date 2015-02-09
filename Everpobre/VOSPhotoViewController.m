@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Vicente Oliva de la Serna. All rights reserved.
 //
 
+@import CoreImage;
+
 #import "VOSPhotoViewController.h"
 #import "VOSNote.h"
 #import "VOSPhotoContainer.h"
@@ -59,8 +61,134 @@
 */
 
 - (IBAction)takePhoto:(id)sender {
+    // Utilizaremos un Picker. UIImagePickerController
+    
+    // creamos un Picker
+    UIImagePickerController * picker = [UIImagePickerController new];
+    
+    // configurar
+    // como averiguar si hay cámara
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        // tenemos cámara
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+    }else{
+        // nos conformamos con el carrete
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    picker.delegate = self;
+    
+    // ponemos transiciones para mostrar el carrete.
+//    picker.modalTransitionStyle = UIModalTransitionStylePartialCurl;  // no funciona bien ya que no se produce un viewWillAppear y
+    picker.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    
+    // presentar
+    [self presentViewController:picker
+                       animated:YES
+                     completion:^{
+                                NSLog(@"terminé");
+                                }];
 }
 
 - (IBAction)deletePhoto:(id)sender {
+    
+    CGRect oldRect = self.photoView.bounds;
+    
+    // Animación
+    [UIView animateWithDuration:0.8
+                          delay:0
+                        options:0
+                     animations:^{
+                         // estado final ( se va a animar )
+                         self.photoView.bounds = CGRectZero;
+                         self.photoView.alpha = 0;
+    }
+                     completion:^(BOOL finished) {
+                         // Quitar la foto del modelo
+                         self.model.photo.image = nil;
+                         
+                         // Quitarla de la vista
+                         self.photoView.image = nil;
+                         
+                         // dejamos la vista como estaba para cuando vuelvan a seleccionar nueva imagen
+                         self.photoView.bounds = oldRect;
+                         self.photoView.alpha = 1.0;
+                     }];
+    
+    [UIView animateWithDuration: 0.8
+                          delay: 0
+         usingSpringWithDamping: 0.4 // factor resistencia del muelle. Si es 1 el muelle rebota pocas veces al ser muy duro
+          initialSpringVelocity: 0.4
+                        options: 0
+                     animations:^{
+                         // transformada afin
+                         self.photoView.transform = CGAffineTransformMakeRotation(M_PI_2);
+                     }
+                     completion:^(BOOL finished) {
+                         //
+                         self.photoView.transform = CGAffineTransformIdentity;
+                     }];
 }
+
+- (IBAction)Vintage:(id)sender {
+    
+    // Creamos un contexto
+    CIContext * context = [CIContext contextWithOptions:nil];
+    
+    // Obtenemos la imagen original
+    CIImage * original = [CIImage imageWithCGImage:self.model.photo.image.CGImage];
+    
+    // Creamos y configuramos el filtro
+    CIFilter * falseColor = [CIFilter filterWithName:@"CIFalseColor"];
+    [falseColor setDefaults];
+    [falseColor setValue:original forKey:@"inputImage"];
+    
+    // Obtengo la imagen de salida
+    CIImage * output = falseColor.outputImage;
+    
+    // Creamos el filtro de viñeta
+    CIFilter * vignette = [CIFilter filterWithName:@"CIVignette"];
+    [vignette setDefaults];
+    [vignette setValue:@12
+                forKey:@"InputIntensity"];
+    
+    // los encadenamos
+    [vignette setValue:output forKey:@"InputImage"];
+    output = vignette.outputImage;
+    
+    // Aplicamos los filtros
+    CGImageRef final = [context createCGImage:output
+                                     fromRect:[output extent]];
+    
+    // Obtengo la imagen en forma de UIImage
+    UIImage * finalImg = [UIImage imageWithCGImage:final];
+    
+    // Liberamos recursos
+    CGImageRelease(final);
+    
+    // Encasquetamos en UIImageView
+    self.photoView.image = finalImg;
+    self.model.photo.image = finalImg;
+    
+}
+
+
+
+
+#pragma mark - UIImagePickerControllerDelegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    // OJO !!! Pico de memoria
+    self.model.photo.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    
+    // Ocultar el picker
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
+    
+    //
+}
+
+
 @end

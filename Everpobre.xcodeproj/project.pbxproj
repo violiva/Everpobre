@@ -257,7 +257,6 @@
 				ADD3CBBC1A837837009FF6CF /* VOSPhotoTableViewCell.h */,
 				ADD3CBBD1A837837009FF6CF /* VOSPhotoTableViewCell.m */,
 				ADD3CBBE1A837837009FF6CF /* VOSPhotoTableViewCell.xib */,
-				ADD3CBC11A83794B009FF6CF /* VOSTextTableViewCell.h */,
 				ADD3CBC21A83794B009FF6CF /* VOSTextTableViewCell.m */,
 				ADD3CBC31A83794B009FF6CF /* VOSTextTableViewCell.xib */,
 				ADD3CBC61A837B1A009FF6CF /* VOSDatesTableViewCell.h */,
@@ -265,6 +264,7 @@
 				ADD3CBC81A837B1A009FF6CF /* VOSDatesTableViewCell.xib */,
 				ADD3CBCB1A837C5E009FF6CF /* VOSNameTableViewCell.h */,
 				ADD3CBCC1A837C5E009FF6CF /* VOSNameTableViewCell.m */,
+				ADD3CBC11A83794B009FF6CF /* VOSTextTableViewCell.h */,
 				ADD3CBCD1A837C5E009FF6CF /* VOSNameTableViewCell.xib */,
 			);
 			name = Views;

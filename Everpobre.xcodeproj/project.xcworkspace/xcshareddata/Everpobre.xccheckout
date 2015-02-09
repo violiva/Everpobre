@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>76A85CA5-7393-4048-A9F0-100880A02EC6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Everpobre</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>08E6C92B90AF20466EF1690B211A69BCAE6FD426</key>
+		<string>https://github.com/violiva/Everpobre.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Everpobre.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>08E6C92B90AF20466EF1690B211A69BCAE6FD426</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/violiva/Everpobre.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>08E6C92B90AF20466EF1690B211A69BCAE6FD426</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>08E6C92B90AF20466EF1690B211A69BCAE6FD426</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Everpobre</string>
+		</dict>
+	</array>
+</dict>
+</plist>

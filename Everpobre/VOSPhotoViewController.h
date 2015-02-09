@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 @class VOSNote;
 
-@interface VOSPhotoViewController : UIViewController
+@interface VOSPhotoViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)deletePhoto:(id)sender;
+- (IBAction)Vintage:(id)sender;
 
 -(id)initWithModel:(VOSNote *) model;
 
