@@ -11,6 +11,7 @@ const struct VOSNoteAttributes VOSNoteAttributes = {
 };
 
 const struct VOSNoteRelationships VOSNoteRelationships = {
+	.location = @"location",
 	.notebook = @"notebook",
 	.photo = @"photo",
 };
@@ -51,6 +52,8 @@ const struct VOSNoteRelationships VOSNoteRelationships = {
 @dynamic name;
 
 @dynamic text;
+
+@dynamic location;
 
 @dynamic notebook;
 

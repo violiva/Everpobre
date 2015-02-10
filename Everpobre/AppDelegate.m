@@ -64,9 +64,8 @@
     //
     // [self trastearConDatos];
     
+    // Arrancamos el autoguardado
     [self autosave];
-    
-    
     
     
     // Override point for customization after application launch.
@@ -144,7 +143,9 @@
 
         NSLog(@"Autoguardando...");
         [self save];
-        [self performSelector:@selector(autosave) withObject:nil afterDelay:AUTO_SAVE_DELAY_IN_SECONDS];
+        [self performSelector:@selector(autosave)
+                   withObject:nil
+                   afterDelay:AUTO_SAVE_DELAY_IN_SECONDS];
         
     }
     
@@ -223,9 +224,6 @@
     [self.stack saveWithErrorBlock:^(NSError * error){
         NSLog(@"Error al guardar, %@", error);
     }];
-    
-    // VOSCoreDataStack
-    
     
     
 }

@@ -80,8 +80,8 @@
     
     // la configuramos
     cell.imageView.image = newImage;
-    cell.textLabel.text = [NSString stringWithFormat: @"Face %d", indexPath.row+1];
-    cell.detailTextLabel.text = [NSString stringWithFormat: @"recognized %d", indexPath.row+1];;
+    cell.textLabel.text = [NSString stringWithFormat: @"Face %ld", indexPath.row+1];
+    cell.detailTextLabel.text = [NSString stringWithFormat: @"recognized %ld", indexPath.row+1];;
     
     // la devolvemos
     return cell;

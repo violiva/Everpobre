@@ -12,10 +12,12 @@ extern const struct VOSNoteAttributes {
 } VOSNoteAttributes;
 
 extern const struct VOSNoteRelationships {
+	__unsafe_unretained NSString *location;
 	__unsafe_unretained NSString *notebook;
 	__unsafe_unretained NSString *photo;
 } VOSNoteRelationships;
 
+@class VOSLocation;
 @class VOSNotebook;
 @class VOSPhotoContainer;
 
@@ -44,6 +46,10 @@ extern const struct VOSNoteRelationships {
 
 //- (BOOL)validateText:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) VOSLocation *location;
+
+//- (BOOL)validateLocation:(id*)value_ error:(NSError**)error_;
+
 @property (nonatomic, strong) VOSNotebook *notebook;
 
 //- (BOOL)validateNotebook:(id*)value_ error:(NSError**)error_;
@@ -67,6 +73,9 @@ extern const struct VOSNoteRelationships {
 
 - (NSString*)primitiveText;
 - (void)setPrimitiveText:(NSString*)value;
+
+- (VOSLocation*)primitiveLocation;
+- (void)setPrimitiveLocation:(VOSLocation*)value;
 
 - (VOSNotebook*)primitiveNotebook;
 - (void)setPrimitiveNotebook:(VOSNotebook*)value;

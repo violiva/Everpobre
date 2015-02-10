@@ -21,6 +21,8 @@
 		AD7CFA4B1A7FAB4F00BB0C19 /* VOSNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA441A7FAB4F00BB0C19 /* VOSNotebook.m */; };
 		AD7CFA4C1A7FAB4F00BB0C19 /* VOSPhotoContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7CFA461A7FAB4F00BB0C19 /* VOSPhotoContainer.m */; };
 		ADAA15C01A80D76700B3575B /* VOSCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAA15BF1A80D76700B3575B /* VOSCoreDataStack.m */; };
+		ADAC39CB1A8A16C100F839C7 /* _VOSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAC39CA1A8A16C100F839C7 /* _VOSLocation.m */; };
+		ADAC39CE1A8A16DF00F839C7 /* VOSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAC39CD1A8A16DF00F839C7 /* VOSLocation.m */; };
 		ADC102EB1A821F9F0040BA95 /* VOSCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC102EA1A821F9F0040BA95 /* VOSCoreDataTableViewController.m */; };
 		ADC102EF1A8220800040BA95 /* VOSNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC102ED1A8220800040BA95 /* VOSNotebooksViewController.m */; };
 		ADC102F71A823FA50040BA95 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC102F61A823FA50040BA95 /* UIViewController+Navigation.m */; };
@@ -82,6 +84,11 @@
 		AD7CFA461A7FAB4F00BB0C19 /* VOSPhotoContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSPhotoContainer.m; sourceTree = "<group>"; };
 		ADAA15BE1A80D76700B3575B /* VOSCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSCoreDataStack.h; sourceTree = "<group>"; };
 		ADAA15BF1A80D76700B3575B /* VOSCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSCoreDataStack.m; sourceTree = "<group>"; };
+		ADAC39C81A8A114B00F839C7 /* Model2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model2.xcdatamodel; sourceTree = "<group>"; };
+		ADAC39C91A8A16C100F839C7 /* _VOSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _VOSLocation.h; sourceTree = "<group>"; };
+		ADAC39CA1A8A16C100F839C7 /* _VOSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _VOSLocation.m; sourceTree = "<group>"; };
+		ADAC39CC1A8A16DF00F839C7 /* VOSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSLocation.h; sourceTree = "<group>"; };
+		ADAC39CD1A8A16DF00F839C7 /* VOSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSLocation.m; sourceTree = "<group>"; };
 		ADC102E91A821F9F0040BA95 /* VOSCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSCoreDataTableViewController.h; sourceTree = "<group>"; };
 		ADC102EA1A821F9F0040BA95 /* VOSCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSCoreDataTableViewController.m; sourceTree = "<group>"; };
 		ADC102EC1A8220800040BA95 /* VOSNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSNotebooksViewController.h; sourceTree = "<group>"; };
@@ -204,6 +211,8 @@
 				ADAA15BF1A80D76700B3575B /* VOSCoreDataStack.m */,
 				ADD12D1B1A7FECF900194603 /* VOSBaseObject.h */,
 				ADD12D1C1A7FECF900194603 /* VOSBaseObject.m */,
+				ADAC39CC1A8A16DF00F839C7 /* VOSLocation.h */,
+				ADAC39CD1A8A16DF00F839C7 /* VOSLocation.m */,
 				AD7CFA411A7FAB4F00BB0C19 /* VOSNote.h */,
 				AD7CFA421A7FAB4F00BB0C19 /* VOSNote.m */,
 				AD7CFA431A7FAB4F00BB0C19 /* VOSNotebook.h */,
@@ -218,6 +227,8 @@
 		AD7CFA4D1A7FABF700BB0C19 /* Machine */ = {
 			isa = PBXGroup;
 			children = (
+				ADAC39C91A8A16C100F839C7 /* _VOSLocation.h */,
+				ADAC39CA1A8A16C100F839C7 /* _VOSLocation.m */,
 				AD7CFA3B1A7FAB4F00BB0C19 /* _VOSNote.h */,
 				AD7CFA3C1A7FAB4F00BB0C19 /* _VOSNote.m */,
 				AD7CFA3D1A7FAB4F00BB0C19 /* _VOSNotebook.h */,
@@ -266,6 +277,7 @@
 				ADD3CBBC1A837837009FF6CF /* VOSPhotoTableViewCell.h */,
 				ADD3CBBD1A837837009FF6CF /* VOSPhotoTableViewCell.m */,
 				ADD3CBBE1A837837009FF6CF /* VOSPhotoTableViewCell.xib */,
+				ADD3CBC11A83794B009FF6CF /* VOSTextTableViewCell.h */,
 				ADD3CBC21A83794B009FF6CF /* VOSTextTableViewCell.m */,
 				ADD3CBC31A83794B009FF6CF /* VOSTextTableViewCell.xib */,
 				ADD3CBC61A837B1A009FF6CF /* VOSDatesTableViewCell.h */,
@@ -273,7 +285,6 @@
 				ADD3CBC81A837B1A009FF6CF /* VOSDatesTableViewCell.xib */,
 				ADD3CBCB1A837C5E009FF6CF /* VOSNameTableViewCell.h */,
 				ADD3CBCC1A837C5E009FF6CF /* VOSNameTableViewCell.m */,
-				ADD3CBC11A83794B009FF6CF /* VOSTextTableViewCell.h */,
 				ADD3CBCD1A837C5E009FF6CF /* VOSNameTableViewCell.xib */,
 			);
 			name = Views;
@@ -402,7 +413,9 @@
 				AD7CFA481A7FAB4F00BB0C19 /* _VOSNotebook.m in Sources */,
 				ADD3CBBF1A837837009FF6CF /* VOSPhotoTableViewCell.m in Sources */,
 				AD0EDA901A896327004672E2 /* VOSFacesTableViewController.m in Sources */,
+				ADAC39CB1A8A16C100F839C7 /* _VOSLocation.m in Sources */,
 				ADF0724B1A83A71D00133C68 /* VOSPhotoViewController.m in Sources */,
+				ADAC39CE1A8A16DF00F839C7 /* VOSLocation.m in Sources */,
 				ADAA15C01A80D76700B3575B /* VOSCoreDataStack.m in Sources */,
 				ADC102FA1A8243690040BA95 /* VOSNotesViewController.m in Sources */,
 				ADC102F71A823FA50040BA95 /* UIViewController+Navigation.m in Sources */,
@@ -617,9 +630,10 @@
 		AD7CFA2F1A7F958400BB0C19 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				ADAC39C81A8A114B00F839C7 /* Model2.xcdatamodel */,
 				AD7CFA301A7F958400BB0C19 /* Model.xcdatamodel */,
 			);
-			currentVersion = AD7CFA301A7F958400BB0C19 /* Model.xcdatamodel */;
+			currentVersion = ADAC39C81A8A114B00F839C7 /* Model2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
